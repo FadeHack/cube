@@ -29,22 +29,23 @@ const CustomerDetails: React.FC = () => {
     const { selectedCustomer, photos, setPhotos, selectedCustomerId } = useCustomerStore();
     const [error, setError] = React.useState<string | null>(null);
 
-
     React.useEffect(() => {
-        if (selectedCustomerId) {
-            const loadCustomerPhotos = async () => {
-                try {
-                    const newPhotos = await fetchPhotos(); // Assuming different photos for different customers
-                    setPhotos(newPhotos);
-                    setError(null); // Clear any previous error
-                } catch (err) {
-                    setError('Failed to fetch photos. Fetching Limit of 50 request has been exceeded.');
-                }
-            };
+        const loadPhotos = async () => {
+            try {
+                const newPhotos = await fetchPhotos();
+                setPhotos(newPhotos);
+                setError(null); // Clear any previous error
+            } catch (err) {
+                setError('Failed to fetch photos. Please try again later.');
+            }
+        };
 
-            loadCustomerPhotos();
-        }
+        loadPhotos();
+        const interval = setInterval(loadPhotos, 10000); // Corrected interval
+
+        return () => clearInterval(interval);
     }, [selectedCustomerId, setPhotos]);
+
 
     if (!selectedCustomer) return <NoCustomerSelected />;
 
