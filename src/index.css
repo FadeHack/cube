@@ -1,0 +1,21 @@
+/* Global styles for scrollbars */
+::-webkit-scrollbar {
+  width: 8px; /* Width for vertical scrollbar */
+  height: 8px; /* Height for horizontal scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #333; /* Dark color for the scrollbar thumb */
+  border-radius: 4px; /* Rounded corners for the scrollbar thumb */
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Light gray background for the scrollbar track */
+  border-radius: 4px; /* Rounded corners for the scrollbar track */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #333 #f0f0f0; /* Dark thumb and light track */
+}
