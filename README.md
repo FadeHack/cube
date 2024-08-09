@@ -1,4 +1,6 @@
-# Cube
+# Cube 🚀
+
+[![Deployment Link](https://img.shields.io/badge/Deployment-Link-brightgreen)](your_deployment_link) 🌈
 
 ## Technologies Used
 
