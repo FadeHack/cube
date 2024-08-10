@@ -1,6 +1,6 @@
 # Cube 🚀
 
-[![Deployment Link](https://img.shields.io/badge/Deployment-Link-brightgreen)](your_deployment_link) 🌈
+[![Deployment Link](https://img.shields.io/badge/Deployment-Link-brightgreen)](https://cubeimg.netlify.app/) 🌈
 
 ## Technologies Used
 
@@ -29,7 +29,7 @@
 
 | Customers List | Customer Details |
 |--------------|-------------|
-| ![Customer List](screenshots/customer-list.jpg) | ![Customer Details](screenshots/customer-details.jpg) |
+| ![Customer List](screenshots/customer-list.png) | ![Customer Details](screenshots/customer-details.png) |
 
 ### Error Page (Custom Alert)
 

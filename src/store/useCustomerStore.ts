@@ -1,12 +1,11 @@
-// src/store/useCustomerStore.tsx
-
 import { create } from 'zustand';
 import { fetchCustomers } from '../api';
 
 interface Customer {
     id: number;
     name: string;
-    description: string;
+    title: string;
+    address: string;
 }
 
 interface CustomerStore {

@@ -1,19 +1,19 @@
-// src/api/index.ts
-
 import axios from "axios";
-
+import { faker } from '@faker-js/faker';
 
 export interface Customer {
     id: number;
     name: string;
-    description: string;
+    title: string;
+    address: string;
 }
 
 export const fetchCustomers = async (page: number, pageSize: number): Promise<Customer[]> => {
     const customers: Customer[] = Array.from({ length: 100 }, (_, i) => ({
         id: i + 1,
-        name: `Customer ${i + 1}`,
-        description: `This is the description for Customer ${i + 1}.`,
+        name: faker.person.fullName(), // Use Faker#person.fullName()
+        title: faker.person.jobTitle(), // Use Faker#person.jobTitle()
+        address: faker.location.streetAddress(), // Use Faker#location.streetAddress()
     }));
 
     // Simulate pagination
@@ -24,6 +24,7 @@ export const fetchCustomers = async (page: number, pageSize: number): Promise<Cu
         setTimeout(() => resolve(paginatedCustomers), 500);
     });
 };
+
 
 export const fetchPhotos = async () => {
     try {

@@ -58,7 +58,10 @@ const CustomerDetails: React.FC = () => {
                     {selectedCustomer.name}
                 </Typography>
                 <Typography variant="body1" color="textSecondary">
-                    {selectedCustomer.description}
+                    {selectedCustomer.title}
+                </Typography>
+                <Typography variant="body2" color="textSecondary">
+                    {selectedCustomer.address}
                 </Typography>
             </Box>
 

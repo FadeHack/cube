@@ -3,15 +3,12 @@ import { Card, CardContent, Typography } from '@mui/material';
 
 interface CustomerCardProps {
     name: string;
-    description: string;
+    title: string;
     isSelected: boolean;
     onClick: () => void;
 }
 
-const CustomerCard: React.FC<CustomerCardProps> = ({ name, description, isSelected, onClick }) => {
-    // Shorten the description if it's longer than 100 characters
-    const shortDescription = description.length > 100 ? `${description.substring(0, 97)}...` : description;
-
+const CustomerCard: React.FC<CustomerCardProps> = ({ name, title, isSelected, onClick }) => {
     return (
         <Card 
             onClick={onClick} 
@@ -28,7 +25,7 @@ const CustomerCard: React.FC<CustomerCardProps> = ({ name, description, isSelect
         >
             <CardContent>
                 <Typography variant="h6">{name}</Typography>
-                <Typography variant="body2" color="textSecondary">{shortDescription}</Typography>
+                <Typography variant="body2" color="textSecondary">{title}</Typography>
             </CardContent>
         </Card>
     );

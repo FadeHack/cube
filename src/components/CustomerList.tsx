@@ -39,7 +39,7 @@ const CustomerList: React.FC = () => {
                     >
                         <CustomerCard
                             name={customer.name}
-                            description={customer.description}
+                            title={customer.title}
                             isSelected={selectedCustomerId === customer.id}
                             onClick={() => setSelectedCustomer(customer.id)}
                         />
